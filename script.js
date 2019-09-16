@@ -47,12 +47,6 @@
 
 	waterLineForm.addEventListener('submit', (e) => {
 		e.preventDefault();
-		const newWaterLine = e.target.elements["waterline"].value;
-		onWaterLineSubmit(newWaterLine);
-	});
-
-	regenerateChainForm.addEventListener('submit', (e) => {
-		e.preventDefault();
 		// get form values
 		const width = e.target.elements["island-chain-width"].value;
 		const height = e.target.elements["island-chain-height"].value;
