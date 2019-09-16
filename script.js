@@ -53,7 +53,6 @@
 		const elevationMin = e.target.elements["island-chain-elevation-min"].value;
 		const elevationMax = e.target.elements["island-chain-elevation-max"].value;
 		const waterLine = e.target.elements["waterline"].value;
-		console.log(e.target.elements);
 		// update model
 		islaVista.regenerate({ width, height, elevationMin, elevationMax, waterLine });
 		// updated view
