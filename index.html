@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Waterline Demo</title>
+	<script type="text/javascript" src="./waterline.js"></script>
+	<style type="text/css">
+		body {
+			width: 100000000px;
+		}
+		li.island {
+			color: #fff;
+			text-align: center;
+		}
+
+		li {
+			display: inline-block;
+			width: 4em;
+		}
+
+		li.above-water {
+			font-weight: bold;
+			background-color: green;
+		}
+
+		li.underwater {
+			background-color: steelblue;
+		}
+
+		.hidden {
+			display: none;
+		}
+
+		.inline-form-input {
+			display: inline-block;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="isla-vista">
+		<h1>Island Chain</h1>
+		<h2>Water Line Level - <span id="elevation-value"></span></h2>
+		<h2>Number of Islands - <span id="island-value"></span></h2>
+		<h2>Number of Submerged Islands - <span id="submerged-value"></span></h2>
+	</div>
+	<form id="water-line-form">
+		<div>
+			<label>Water Line</label>
+			<input id="waterline" type="number"></input>
+		</div>
+		<button type="submit">Update</button>
+		<button id="more-options">Toggle More Options</button>
+	</form>
+	<form id="regenerate-chain-form" class="hidden">
+		<h3>More Island Chain Options</h3>
+		<div>
+			<label>Width</label>
+			<input id="island-chain-width" type="number"></input>
+		</div>
+		<div>
+			<label>Height</label>
+			<input id="island-chain-height" type="number"></input>
+		</div>
+		<div class="inline-form-input">
+			<label>Elevation Range</label>
+			<input id="island-chain-elevation-min" type="number"></input>
+		</div>
+		-
+		<div class="inline-form-input">
+			<input id="island-chain-elevation-max" type="number"></input>
+		</div>
+		<button type="submit" id="regenerate">Regenerate Island Chain</button>
+	</form>
+	<script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
