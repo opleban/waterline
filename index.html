@@ -6,15 +6,53 @@
 	<style type="text/css">
 		body {
 			width: 100000000px;
+			padding-left: 1em;
 		}
+
+		ul {
+			margin: 0em;
+			padding: 0;
+		}
+
+		ul#island-chain-list {
+			margin: 1em 0;
+		}
+
 		li.island {
+			display: inline-block;
+			width: 4em;
 			color: #fff;
 			text-align: center;
 		}
 
-		li {
+		.legend {
+			width: 13.5em;
+			border: 1px solid black;
+		}
+
+		.legend ul {
+			margin: 0.5em 1em;
+    		padding: 0;
+		}
+
+		.legend li {
+			list-style: none;
+			margin-bottom: 0.2em;
+		}
+
+		.legend-icon {
+			width: 1em;
+			height: 1em;
 			display: inline-block;
-			width: 4em;
+			margin-right: 0.5em;
+		}
+
+		.legend-icon.green {
+			background-color: green;
+		}
+
+		.legend-icon.steelblue {
+			background-color: steelblue;
 		}
 
 		li.above-water {
@@ -34,14 +72,21 @@
 			display: inline-block;
 		}
 
+
 	</style>
 </head>
 <body>
 	<div id="isla-vista">
-		<h1>Island Chain</h1>
-		<h2>Water Line Level - <span id="elevation-value"></span></h2>
-		<h2>Number of Islands - <span id="island-value"></span></h2>
-		<h2>Number of Submerged Islands - <span id="submerged-value"></span></h2>
+		<h1>Isla Vista Island Chain</h1>
+		<h3>Water Line Level - <span id="elevation-value"></span></h3>
+		<h3>Number of Islands - <span id="island-value"></span></h3>
+		<h3>Number of Submerged Islands - <span id="submerged-value"></span></h3>
+		<div class="legend">
+			<ul>
+				<li><span class="green legend-icon"></span>above water</li>
+				<li><span class="steelblue legend-icon"></span>underwater/submerged</li>
+			</ul>
+		</div>
 	</div>
 	<form id="water-line-form">
 		<div>

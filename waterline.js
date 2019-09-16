@@ -1,6 +1,11 @@
+const DEFAULT_HEIGHT = 10;
+const DEFAULT_WIDTH = 5;
+const DEFAULT_WATER_LINE = 100;
+const DEFAULT_ELEVATION_MIN = 50;
+const DEFAULT_ELEVATION_MAX = 200;
 class IslandChainModel {
-  constructor({ height = 10, width = 5, waterLine = 100, 
-                elevationMin = 50, elevationMax = 200 } = {}) {
+  constructor({ height = DEFAULT_HEIGHT, width = DEFAULT_WIDTH, waterLine = DEFAULT_WATER_LINE, 
+                elevationMin = DEFAULT_ELEVATION_MIN, elevationMax = DEFAULT_ELEVATION_MAX } = {}) {
     this.height = +height;
     this.width = +width;
     this.waterLine = +waterLine;
@@ -38,8 +43,8 @@ class IslandChainModel {
     this.waterLine = value;
   }
 
-  regenerate({ height = 10, width = 5, waterLine = 100, 
-                elevationMin = 50, elevationMax = 200 } = {}) {
+  regenerate({ height = DEFAULT_HEIGHT, width = DEFAULT_WIDTH, waterLine = DEFAULT_WATER_LINE, 
+                elevationMin = DEFAULT_ELEVATION_MIN, elevationMax = DEFAULT_ELEVATION_MAX } = {}) {
     this.height = +height;
     this.width = +width;
     this.waterLine = +waterLine;
@@ -78,7 +83,7 @@ class IslandChainViewer {
     islandChain.setAttribute('id', 'island-chain-list');
     this.islandChainModel.islands.forEach((island, idx) => {
       islandChain.appendChild(this.createIslandFragment(island));
-      
+
       if (this.isEndOfRow(this.islandChainModel.width, idx)) {
         islandChain.appendChild(document.createElement('br'));
       }
